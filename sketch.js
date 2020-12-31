@@ -5,21 +5,23 @@ var dogImage, happyDogImage;
 function preload()
 {
   //loading images
-  dogImage = loadImage("images/dogImg.png");
-  happyDogImage = loadImage("images/dogImg1.png");
+  dogImage = loadImage("images/dogimg.png");
+  happyDogImage = loadImage("images/dogimg1.png");
 }
 
 function setup() {
   database = firebase.database();
 
-  foodStock = database.ref("Food");
-  foodStock.on("value",readStock);
 
   createCanvas(500,500);
   
   dog = createSprite(250,290);
   dog.addImage(dogImage);
   dog.scale = 0.2;
+
+  
+  foodStock = database.ref("Food");
+  foodStock.on("value",readStock);
 }
 
 
