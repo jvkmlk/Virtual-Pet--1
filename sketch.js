@@ -55,7 +55,7 @@ function setup() {
     injection.scale = 0.3
     injection.visible=false;
     
-    feed=createButton("Feed the dog")
+    feed=createButton("Run Left Drago")
     feed.position(700,95)
     feed.mousePressed(feedDog)
 
